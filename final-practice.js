@@ -116,21 +116,23 @@ let finalChallenge = readline.question(`A veil of darkness falls over you while 
 };
 
 function palindromeCheck(word) { // Function to check if a word is a palidrome
+    let matchedWord = word.toLowerCase().trim(); // Converting the word to lowercase and trimming whitespace for comparison
     let reversedWord = word.split('').reverse().join(''); // Reversing the string
     return reversedWord === word;
 };
-let dragonPalin = false; // set a boolean for false for the dragon mission
-let princessPalin = true; // Set to boolean for true for the princess mission
-let currentKey = (dragonKey[0]); // Created a variable to MAP the keys to check for palindromes
-let palindromeCheckResult = palindromeCheck(currentKey);
+/*let currentKeys = [dragonKey[0], princessKey[0]]; // Created an array for the keys
+for (let key of currentKeys) { // Creating a for if loop to check the boolean value of the palindromeCheck function
+*/
+let palindromeCheckResult = palindromeCheck(finalChallenge);
 let optionalQuestion = readline.question('True or False, Your key is a palindrome?\n');
-let userInput = optionalQuestion.toLowerCase().trim() === "true"; // Using trim to remove any extra spaces and convert the input to lowercase for comparison
-        if (userInput === palindromeCheckResult) {
+let userInput = optionalQuestion.toLowerCase().trim() === "true"; // Converting the user input to lowercase and trimming whitespace for comparison
+    if (userInput === palindromeCheckResult) {
         console.log('Correct! You can have the reward.');
     } else {
         console.log('Incorrect. You completed your mission, but you cannot have the reward.\n');
     };
-/*
+/*/ 
+
 Task 5
 Create a message to indicate the end of the game and the outcome.
 */
