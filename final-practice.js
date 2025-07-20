@@ -132,7 +132,6 @@ let userInput = optionalQuestion.toLowerCase().trim() === "true"; // Converting 
         console.log('Incorrect. You completed your mission, but you cannot have the reward.\n');
     };
 /*/ 
-
 Task 5
 Create a message to indicate the end of the game and the outcome.
 */
